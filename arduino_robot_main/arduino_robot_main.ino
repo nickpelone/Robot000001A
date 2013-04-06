@@ -74,8 +74,13 @@ int hardLeftTurnCounter = 0;
 int irPin1 = 50;	//Front IR pin
 int irPin2 = 51;	//Rear IR pin
 boolean irStatus = false;	//Are we in position via IR? true means stop
-int eastColorSet1[] = { 1, 2, 0, 3, 4, 5};
-int eastColorSet2[] = { 2, 3, 1, 5, 0, 4};
+int southColorSet1[] = { 1, 2, 0, 3, 4, 5};
+int southColorSet2[] = { 2, 3, 1, 5, 0, 4};
+int southColorSet3[] = { 3, 4, 0, 2, 5, 1};
+int southColorSet4[] = { 1, 3, 2, 4, 5, 0}
+int eastColorSet1[] = { 3, 1, 4, 5, 0, 2};
+int eastColorSet2[] = { 1, 4, 0, 3, 2, 5};
+int eastColorSet3[] = { 4, 2, 1, 0, 3, 5};
 
 void setup() {                                     // Main application entry point
   pinMode(RXPIN, INPUT);                          // Define the appropriate input/output pins
