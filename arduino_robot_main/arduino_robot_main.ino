@@ -74,6 +74,8 @@ int hardLeftTurnCounter = 0;
 int irPin1 = 50;	//Front IR pin
 int irPin2 = 51;	//Rear IR pin
 boolean irStatus = false;	//Are we in position via IR? true means stop
+int eastColorSet1[] = { 1, 2, 0, 3, 4, 5};
+int eastColorSet2[] = { 2, 3, 1, 5, 0, 4};
 
 void setup() {                                     // Main application entry point
   pinMode(RXPIN, INPUT);                          // Define the appropriate input/output pins
@@ -571,7 +573,6 @@ void dropOffBlock() {
 }
 ////READEAST ////////////////////////////////////////////////////////////////////////
 void readEastColors() {
-<<<<<<< HEAD
   debugPrintLn("Incomming data is from the bottom color sensor");
   if (cmF < 24){
     hardLeft(1, 0);
@@ -579,9 +580,7 @@ void readEastColors() {
   if (cmF > 140){
     northCount = 0;
   }
-=======
   setCmRR();
->>>>>>> upstream/master
   if (cmF < 92 && northCount > 5){  //originally <85
     hardLeft(1, 0);
     northCount = 0;
